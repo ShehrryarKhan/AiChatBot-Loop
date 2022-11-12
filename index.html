@@ -17,27 +17,40 @@
             <form onsubmit="table(); return false">
                 <div>
                     Which Table:
-                    <input type="number" id="inputtable" placeholder="Enter Your Table" required autofocus />
+                    <input type="number" id="inputtable" placeholder="Enter Your Table" required  />
                     <button>Enter</button>
                 </div>
                 <div>
                     How many times:
-                    <input type="number" id="limittable" value="10" Placeholder="Multiply" required autofocus />
+                    <input type="number" id="limittable" value="10" Placeholder="Multiply" required  />
                     <button>Enter</button>
                 </div>
             </form>
             <h4 id="output"></h4>
+            <h3 id="result"></h3>
         </div>
     </div>
     <script>
         function table() {
             
-
+                     
+            if(inputtable>0){
+                document.getElementById("result").innerHTML = "The Number is positive"
+            }else{
+                    document.getElementById("result").innerHTML = "The Number is Negative"
+                
+            }if(inputtable===0){
+                document.getElementById("result").innerHTML = "Please try above 2 table"
+            }else{
+                document.getAnimations("result").innerHTML = "Only Positive Value acceptable"
+            }
     
             let num = +document.getElementById("inputtable").value;
             let limit = +document.getElementById("limittable").value;
 
             let output = '';
+            
+          
             for (let i = 0; i < limit; i++) {
                 output += `${num} x ${i + 1} = ${(i + 1) * num} <br/>`
 
