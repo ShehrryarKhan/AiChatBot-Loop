@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Multiplication Table</title>
+</head>
+
+<body>
+    <div class="box">
+        <h1 class="heading">Maths Table</h1>
+
+        <div class="inner-box">
+            <form onsubmit="table(); return false">
+                <div>
+                    Which Table:
+                    <input type="number" id="inputtable" placeholder="Enter Your Table" required autofocus />
+                    <button>Enter</button>
+                </div>
+                <div>
+                    How many times:
+                    <input type="number" id="limittable" value="10" Placeholder="Multiply" required autofocus />
+                    <button>Enter</button>
+                </div>
+            </form>
+            <h4 id="output"></h4>
+        </div>
+    </div>
+    <script>
+        function table() {
+            // let grade=parseInt(document.getElementById('inputgrade').value)
+
+            // youo can parse or add +before document
+            let num = +document.getElementById("inputtable").value;
+            let limit = +document.getElementById("limittable").value;
+
+            let output = '';
+            for (let i = 0; i < limit; i++) {
+                output += `${num} x ${i + 1} = ${(i + 1) * num} <br/>`
+
+
+            }
+            document.getElementById('output').innerHTML = output
+        }
+    </script>
+</body>
+
+</html>
