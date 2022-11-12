@@ -31,33 +31,26 @@
         </div>
     </div>
     <script>
-        function table() {
-            
-                     
-            if(inputtable>0){
-                document.getElementById("output").innerHTML = "The Number is positive"
-            }else{
-                    document.getElementById("output").innerHTML = "The Number is Positive"
-                
-            }if(inputtable===0){
-                document.getElementById("output").innerHTML = "Please try above 2 table"
-            }else{
-                document.getAnimations("output").innerHTML = "Only Positive Value acceptable"
-            }
     
-            let num = +document.getElementById("inputtable").value;
-            let limit = +document.getElementById("limittable").value;
-
-            let output = '';
             
-          
-            for (let i = 0; i < limit; i++) {
-                output += `${num} x ${i + 1} = ${(i + 1) * num} <br/>`
+        function table() {
 
 
-            }
-            document.getElementById('output').innerHTML = output
+        let num = +document.getElementById("inputtable").value;
+        let limit = +document.getElementById("limittable").value;
+
+        let output='';
+        if (limit>0){
+          for(let i=0;i<limit;i++){
+          output+=`${num} x ${i+1} = ${(i+1)*num} <br/>`
+          }
+
+          document.getElementById('output').innerHTML=output
+        }else{
+          document.getElementById('output').innerHTML='Invalid, Try bigger than 0'          
         }
+
+      }
     </script>
 </body>
 
