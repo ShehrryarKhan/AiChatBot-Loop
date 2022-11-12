@@ -27,7 +27,7 @@
                 </div>
             </form>
             <h4 id="output"></h4>
-            <h3 id="result"></h3>
+            
         </div>
     </div>
     <script>
@@ -35,14 +35,14 @@
             
                      
             if(inputtable>0){
-                document.getElementById("result").innerHTML = "The Number is positive"
+                document.getElementById("output").innerHTML = "The Number is positive"
             }else{
-                    document.getElementById("result").innerHTML = "The Number is Negative"
+                    document.getElementById("output").innerHTML = "The Number is Positive"
                 
             }if(inputtable===0){
-                document.getElementById("result").innerHTML = "Please try above 2 table"
+                document.getElementById("output").innerHTML = "Please try above 2 table"
             }else{
-                document.getAnimations("result").innerHTML = "Only Positive Value acceptable"
+                document.getAnimations("output").innerHTML = "Only Positive Value acceptable"
             }
     
             let num = +document.getElementById("inputtable").value;
